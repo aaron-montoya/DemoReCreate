@@ -54,14 +54,38 @@
 		5DEAB16A1F8D3D87003FAD48 /* DemoReCreate */ = {
 			isa = PBXGroup;
 			children = (
-				5DEAB16B1F8D3D87003FAD48 /* AppDelegate.swift */,
-				5DEAB16D1F8D3D87003FAD48 /* ViewController.swift */,
-				5DEAB16F1F8D3D87003FAD48 /* Main.storyboard */,
-				5DEAB1721F8D3D87003FAD48 /* Assets.xcassets */,
-				5DEAB1741F8D3D87003FAD48 /* LaunchScreen.storyboard */,
-				5DEAB1771F8D3D87003FAD48 /* Info.plist */,
+				5DEAB17E1F8D4DC0003FAD48 /* Controller */,
+				5DEAB17F1F8D4E0A003FAD48 /* View */,
+				5DEAB1801F8D4E41003FAD48 /* Resources */,
 			);
 			path = DemoReCreate;
+			sourceTree = "<group>";
+		};
+		5DEAB17E1F8D4DC0003FAD48 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				5DEAB16B1F8D3D87003FAD48 /* AppDelegate.swift */,
+				5DEAB16D1F8D3D87003FAD48 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		5DEAB17F1F8D4E0A003FAD48 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5DEAB16F1F8D3D87003FAD48 /* Main.storyboard */,
+				5DEAB1741F8D3D87003FAD48 /* LaunchScreen.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5DEAB1801F8D4E41003FAD48 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5DEAB1721F8D3D87003FAD48 /* Assets.xcassets */,
+				5DEAB1771F8D3D87003FAD48 /* Info.plist */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -275,7 +299,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DemoReCreate/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DemoReCreate/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.DemoReCreate;
@@ -290,7 +314,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = DemoReCreate/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/DemoReCreate/Resources/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = CTEC.DemoReCreate;
