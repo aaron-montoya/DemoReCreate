@@ -23,9 +23,18 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+ 
+    //SliderMethod, Changes the colour of the button, slider, background and label
     @IBAction func sliderMethod(_ sender: UISlider) {
-        
+        firstSlider.backgroundColor = createRandomColour()
+        firstSlider.thumbTintColor = createRandomColour()
+        firstSlider.maximumTrackTintColor = createRandomColour()
+        firstSlider.minimumTrackTintColor = createRandomColour()
+        firstButton.backgroundColor = createRandomColour()
+        view.backgroundColor = createRandomColour()
+        firstButton.setTitleColor(createRandomColour(), for: .normal)
+        redLabel.backgroundColor = createRandomColour()
+        redLabel.textColor = createRandomColour()
     }
     
     @IBAction func firstMethod(_ sender: UIButton) {
@@ -35,6 +44,24 @@ class ViewController: UIViewController {
         
         redLabel.text = "Blah"
     }
+    
+    private func randomString(length: Int) -> String {
+        let letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890"
+        let len = letters.count
+        
+        var random_string = ""
+        
+        for _ in 0..<length
+        {
+            let rand = arc4random_uniform(UInt32(len))
+            //var next_character = letters.character(at: rand)
+            //random_string += next_character
+            
+        }
+        return random_string
+    }
+    
+    
     
     private func createRandomColour() -> UIColor {
         let new_colour:UIColor
