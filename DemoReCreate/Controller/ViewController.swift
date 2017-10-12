@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var firstButton: UIButton!
+    @IBOutlet weak var redLabel: UILabel!
+    @IBOutlet weak var firstSlider: UISlider!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,11 +24,16 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func sliderMethod(_ sender: UISlider) {
+        
+    }
     
     @IBAction func firstMethod(_ sender: UIButton) {
         firstButton.backgroundColor = createRandomColour()
         view.backgroundColor = createRandomColour()
         firstButton.setTitleColor(createRandomColour(), for: .normal)
+        
+        redLabel.text = "Blah"
     }
     
     private func createRandomColour() -> UIColor {
@@ -39,6 +46,8 @@ class ViewController: UIViewController {
         
         return new_colour
     }
+    
+    
     
 }
 
