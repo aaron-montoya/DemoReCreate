@@ -54,8 +54,8 @@ class ViewController: UIViewController {
         for _ in 0..<length
         {
             let rand = arc4random_uniform(UInt32(len))
-            //var next_character = letters.character(at: rand)
-            //random_string += next_character
+            //var next_character = //Random character from the letters string
+            //random_string += //Add next_character to the end of the string
             
         }
         return random_string
