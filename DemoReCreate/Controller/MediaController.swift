@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 public class MediaController: UIViewController
 {
@@ -18,11 +19,12 @@ public class MediaController: UIViewController
     
     private lazy var colour : ColourTools = ColourTools()
     private var image_counter : Int = 0
-    
+    private var soundPlayer : AVAudioPlayer?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
-        
+        view.backgroundColor = colour.createRandomColour()
+        loadAudioFile()
         // Do any additional setup after loading the view.
     }
     
@@ -31,6 +33,25 @@ public class MediaController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    public func loadAudioFile() -> Void
+    {
+        if let soundURL = NSDataAsset(name: "Kookaburra")
+        {
+            do
+            {
+                try! AVAudioSession.sharedInstance().setCategory(AVAudioSessionCategoryPlayback)
+                try! AVAudioSession.sharedInstance().setActive(true)
+                
+                try soundPlayer = AVAudioPlayer(data: soundURL.data, fileTypeHint: AVFileType.mp3.rawValue)
+                FirstSlider.maximumValue = Float ((soundPlayer?.duration)!)
+                //Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: (#selector(self.updateSlider)), userInfo: nil, repeats: true)
+            }
+            catch
+            {
+                print("Audio File Load Error")
+            }
+        }
+    }
 
     @IBAction func changePicture(_ sender: UIButton)
     {
