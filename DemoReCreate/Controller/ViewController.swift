@@ -49,7 +49,7 @@ class ViewController: UIViewController {
         firstButton.setTitleColor(colour_tool.createRandomColour(), for: .normal)
         
         //Change the label text to Blah
-        redLabel.text = randomString(length: 4)
+        redLabel.text = randomString(length: 8)
         //Force resize the button
     }
     

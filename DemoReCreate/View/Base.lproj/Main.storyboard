@@ -25,13 +25,6 @@
                                     <action selector="firstMethod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="W5t-LO-WGm"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emR-yS-uuN">
-                                <rect key="frame" x="160" y="388" width="55" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Ggf-DS-APk">
                                 <rect key="frame" x="-2" y="249" width="379" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -50,6 +43,13 @@
                                     <segue destination="s6K-OM-iK2" kind="show" id="W5H-hx-DAm"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Default" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="emR-yS-uuN">
+                                <rect key="frame" x="98" y="386" width="178" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -92,7 +92,7 @@
                                 <color key="backgroundColor" red="0.90196078430000004" green="0.91764705879999997" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Change Picture"/>
                                 <connections>
-                                    <action selector="ChangeImage:" destination="s6K-OM-iK2" eventType="touchUpInside" id="RdE-sk-QjT"/>
+                                    <action selector="changePicture:" destination="s6K-OM-iK2" eventType="touchUpInside" id="jAq-y2-6Ag"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -101,8 +101,8 @@
                     </view>
                     <connections>
                         <outlet property="FirstSlider" destination="awb-Tc-2d2" id="1fd-kU-Inm"/>
-                        <outlet property="LeftButton" destination="wn7-5A-pXV" id="Kks-9t-6Yh"/>
-                        <outlet property="RightButton" destination="QxD-qA-Asm" id="bOb-B5-0vv"/>
+                        <outlet property="LeftButton" destination="wn7-5A-pXV" id="Xou-cj-VY2"/>
+                        <outlet property="RightButton" destination="QxD-qA-Asm" id="26w-8s-KHw"/>
                         <outlet property="UIImageView" destination="RZs-tL-XEL" id="tvi-FJ-Ies"/>
                     </connections>
                 </viewController>

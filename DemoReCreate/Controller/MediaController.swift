@@ -31,7 +31,8 @@ public class MediaController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func ChangeImage(_ sender: UIButton)
+
+    @IBAction func changePicture(_ sender: UIButton)
     {
         changeImage()
         view.backgroundColor = colour.createRandomColour()
