@@ -10,5 +10,11 @@ import UIKit
 
 public class SecondScreenController : UIViewController
 {
+    private lazy var colour_tool : ColourTools = ColourTools()
     
+    override public func viewDidLoad()
+    {
+        super.viewDidLoad()
+        view.backgroundColor = colour_tool.createRandomColour()
+    }
 }
