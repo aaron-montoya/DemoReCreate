@@ -80,11 +80,17 @@
                                 <rect key="frame" x="31" y="260" width="133" height="54"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.90196078431372551" green="0.91764705882352937" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
+                                <state key="normal" title="Play Sound"/>
+                                <connections>
+                                    <action selector="soundButtonClick" destination="s6K-OM-iK2" eventType="touchUpInside" id="P3y-2X-TVy"/>
+                                </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="awb-Tc-2d2">
                                 <rect key="frame" x="65" y="340" width="244" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="sliderMethod" destination="s6K-OM-iK2" eventType="valueChanged" id="TVp-eV-kJF"/>
+                                </connections>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QxD-qA-Asm">
                                 <rect key="frame" x="210" y="260" width="133" height="54"/>
@@ -100,10 +106,10 @@
                         <viewLayoutGuide key="safeArea" id="ZfH-1w-nNo"/>
                     </view>
                     <connections>
-                        <outlet property="FirstSlider" destination="awb-Tc-2d2" id="1fd-kU-Inm"/>
-                        <outlet property="LeftButton" destination="wn7-5A-pXV" id="Xou-cj-VY2"/>
+                        <outlet property="LeftButton" destination="wn7-5A-pXV" id="MIc-92-Sgx"/>
                         <outlet property="RightButton" destination="QxD-qA-Asm" id="26w-8s-KHw"/>
                         <outlet property="UIImageView" destination="RZs-tL-XEL" id="tvi-FJ-Ies"/>
+                        <outlet property="soundSlider" destination="awb-Tc-2d2" id="ZzA-Yy-Hg5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ul9-NY-aoa" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -14,7 +14,7 @@ public class MediaController: UIViewController
     @IBOutlet weak var UIImageView: UIImageView!
     @IBOutlet weak var LeftButton: UIButton!
     @IBOutlet weak var RightButton: UIButton!
-    @IBOutlet weak var FirstSlider: UISlider!
+    @IBOutlet weak var soundSlider: UISlider!
     
     
     private lazy var colour : ColourTools = ColourTools()
@@ -33,6 +33,28 @@ public class MediaController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    //Clicking the sound button
+    @IBAction func soundButtonClick() -> Void
+    {
+        playMusicFile()
+        view.backgroundColor = colour.createRandomColour()
+    }
+    
+    //Slider Method
+    @IBAction func sliderMethod() -> Void
+    {
+        let seekTime = Double (soundSlider.value)
+        soundPlayer?.currentTime = seekTime
+    }
+    
+    //Play the music file
+    private func playMusicFile() -> Void
+    {
+        soundPlayer?.play()
+    }
+    
+    
+    
     public func loadAudioFile() -> Void
     {
         if let soundURL = NSDataAsset(name: "Kookaburra")
@@ -43,8 +65,8 @@ public class MediaController: UIViewController
                 try! AVAudioSession.sharedInstance().setActive(true)
                 
                 try soundPlayer = AVAudioPlayer(data: soundURL.data, fileTypeHint: AVFileType.mp3.rawValue)
-                FirstSlider.maximumValue = Float ((soundPlayer?.duration)!)
-                //Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: (#selector(self.updateSlider)), userInfo: nil, repeats: true)
+                soundSlider.maximumValue = Float ((soundPlayer?.duration)!)
+                Timer.scheduledTimer(timeInterval: 0.2, target: self, selector: (#selector(self.updateSlider)), userInfo: nil, repeats: true)
             }
             catch
             {
@@ -53,12 +75,19 @@ public class MediaController: UIViewController
         }
     }
 
+    @objc private func updateSlider() -> Void
+    {
+        soundSlider.value = Float ((soundPlayer?.currentTime)!)
+    }
+    
+    //Clicking the change picture button
     @IBAction func changePicture(_ sender: UIButton)
     {
         changeImage()
         view.backgroundColor = colour.createRandomColour()
     }
     
+    //Change the image in the UIImageView
     private func changeImage() -> Void
     {
         if image_counter > 2
