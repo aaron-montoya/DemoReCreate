@@ -50,7 +50,20 @@ public class MediaController: UIViewController
     //Play the music file
     private func playMusicFile() -> Void
     {
-        soundPlayer?.play()
+        if let isPlaying = soundPlayer?.isPlaying
+        {
+            if (isPlaying)
+            {
+                soundPlayer?.pause()
+                LeftButton.setTitle("Play Sound", for: <#UIControlState#>)
+            }
+            else
+            {
+                soundPlayer?.play()
+                LeftButton.setTitle("Pause Sound", for: <#T##UIControlState#>)
+            }
+        }
+        //soundPlayer?.play()
     }
     
     
